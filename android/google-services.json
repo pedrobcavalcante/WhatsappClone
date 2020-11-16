@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "182484062755",
+    "firebase_url": "https://whatsapp-e6200.firebaseio.com",
+    "project_id": "whatsapp-e6200",
+    "storage_bucket": "whatsapp-e6200.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182484062755:android:54179ff376585f63095796",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182484062755-1v5i9e4lfig791ckjkanblnlpp163s4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYAsBEH6D9Xr9mgMVIHT06Pq-B4NtK86I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182484062755-1v5i9e4lfig791ckjkanblnlpp163s4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
