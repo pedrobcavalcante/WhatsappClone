@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:whatsapp_clone/shared/routers/app_pages.dart';
 import 'package:whatsapp_clone/shared/widgets/textFild.widget.dart';
 
-import 'login.controller.dart';
+import 'cadastro.controller.dart';
 
-class LoginPage extends StatelessWidget {
-  final LoginController controller = Get.put(LoginController());
+class CadastroPage extends StatelessWidget {
+  final CadastroController controller = Get.put(CadastroController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +28,13 @@ class LoginPage extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 10),
                           child: TextFieldWidget(
+                            "Login",
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 10),
+                          child: TextFieldWidget(
                             "E-mail",
                           ),
                         ),
@@ -36,6 +43,14 @@ class LoginPage extends StatelessWidget {
                               horizontal: 20, vertical: 10),
                           child: TextFieldWidget(
                             "Senha",
+                            obscureText: true,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 10),
+                          child: TextFieldWidget(
+                            "Repita a Senha",
                             obscureText: true,
                           ),
                         ),
@@ -51,7 +66,7 @@ class LoginPage extends StatelessWidget {
                                 margin: EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 20),
                                 child: Text(
-                                  "Entrar",
+                                  "Cadastrar",
                                   style: TextStyle(
                                       fontSize: 20, color: Colors.white),
                                 ),
@@ -63,15 +78,17 @@ class LoginPage extends StatelessWidget {
                       ],
                     )),
                 Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: GestureDetector(
-                    child: Text("Não tem conta? cadastre-se!",
-                        style: TextStyle(color: Colors.white)),
-                    onTap: () {
-                      Get.toNamed(Routes.CADASTRO);
-                    },
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: GestureDetector(
+                      child: Text("Voltar a tela de Login",
+                          style: TextStyle(color: Colors.white)),
+                      onTap: () {
+                        Get.back();
+                      },
+                    ),
                   ),
-                ),
+                )
               ],
             ),
           ),
