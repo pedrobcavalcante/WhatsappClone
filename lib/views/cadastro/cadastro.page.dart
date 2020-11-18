@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:whatsapp_clone/shared/routers/app_pages.dart';
 import 'package:whatsapp_clone/shared/widgets/textFild.widget.dart';
 
 import 'cadastro.controller.dart';
@@ -29,6 +28,8 @@ class CadastroPage extends StatelessWidget {
                               horizontal: 20, vertical: 10),
                           child: TextFieldWidget(
                             "Login",
+                            controller: controller.loginController,
+                            validator: controller.nullValidator,
                           ),
                         ),
                         Padding(
@@ -36,6 +37,8 @@ class CadastroPage extends StatelessWidget {
                               horizontal: 20, vertical: 10),
                           child: TextFieldWidget(
                             "E-mail",
+                            controller: controller.emailController,
+                            validator: controller.nullValidator,
                           ),
                         ),
                         Padding(
@@ -43,6 +46,8 @@ class CadastroPage extends StatelessWidget {
                               horizontal: 20, vertical: 10),
                           child: TextFieldWidget(
                             "Senha",
+                            controller: controller.senhaController,
+                            validator: controller.nullValidator,
                             obscureText: true,
                           ),
                         ),
@@ -51,6 +56,8 @@ class CadastroPage extends StatelessWidget {
                               horizontal: 20, vertical: 10),
                           child: TextFieldWidget(
                             "Repita a Senha",
+                            controller: controller.repetirSenhaController,
+                            validator: controller.nullValidator,
                             obscureText: true,
                           ),
                         ),
@@ -71,7 +78,9 @@ class CadastroPage extends StatelessWidget {
                                       fontSize: 20, color: Colors.white),
                                 ),
                               ),
-                              onTap: () {},
+                              onTap: () {
+                                controller.cadastrar();
+                              },
                             ),
                           ),
                         )

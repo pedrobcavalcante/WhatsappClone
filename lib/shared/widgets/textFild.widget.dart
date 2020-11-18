@@ -22,7 +22,7 @@ class TextFieldWidget extends StatelessWidget {
     return TextFormField(
       autofocus: autofocus,
       keyboardType: keyboardType,
-      validator: validator == null ? null : (value) => validator(value),
+      validator: (value) => validator(value),
       controller: controller,
       obscureText: obscureText,
       style: TextStyle(fontSize: 20),
