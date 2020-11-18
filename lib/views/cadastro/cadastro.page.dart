@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:whatsapp_clone/shared/repository/auth.repository.dart';
 import 'package:whatsapp_clone/shared/widgets/textFild.widget.dart';
 
 import 'cadastro.controller.dart';

@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp_clone/shared/models/user_res.model.dart';
@@ -31,6 +30,7 @@ class CadastroController extends GetxController {
             senha: senhaController.text);
         UserResModel user = await ProviderFirebase.cadastrar(usuario);
         if (user.code == "sucess") {
+          ProviderFirebase.addUsuario(usuario, user.userCredential.user.uid);
           Get.snackbar("Cadastro", "Usuário cadastrado com sucesso!",
               backgroundColor: Constants.branco, barBlur: 1.0);
           Get.back();
